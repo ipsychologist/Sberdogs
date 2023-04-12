@@ -8,7 +8,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-
+import App from "./App";
 // Взять из html-файла тег, внутри которого будет работать React
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -26,12 +26,4 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   )
 // )
 
-root.render(
-  <div>
-    <h1>Hello React</h1>
-    <p>DogFood 
-      <br />
-    shop</p>
-    <i />
-  </div>
-)
+root.render(<App/>)
