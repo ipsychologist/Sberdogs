@@ -5,3 +5,8 @@ export default () => {
         <div className="logo">DogFood</div>
     </header>
 }
+
+const Footer = () => <div>footer</div>
+export { Footer };
+
+// export defaul () => <div>footer</div>
