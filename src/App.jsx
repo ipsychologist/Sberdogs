@@ -1,3 +1,4 @@
+import {useState} from "react" //состояния
 import testData from "./assents/data.json";
 import Card from "./components/Card/Card"; // Card.jsx
 import Promo from "./components/Promo/Promo";
@@ -11,10 +12,16 @@ console.log(testData);
 
 
 const App = () => {
-   
-    return (
+    
+//    const user = localStorage.getItem("userStore"); 
+const [user, setUser] = useState(localStorage.getItem("userStore")); //localStorage.getItem("userStore") 1 аргумент который передается по умолчанию это локалсторадж
+    //сохрани в переменную user то значение что находится внутри useState
+
+return (
     <>
-      <Header/>
+{/* upd -это передали функцию setUser внутрь компонента Header,
+ чтобы внутри использовать ее как слово upd() */}
+      <Header user={user} upd={setUser}/>
       <div>
           <h1>Food for Dodge</h1>
           <div className="container">
